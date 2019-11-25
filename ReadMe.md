@@ -15,7 +15,7 @@ If you write list of things in new lines then you cannot make it to appear in a 
 **After These 10 Concepts you will  be enough to mention CSS in your resume**
 
 
-#1 : BOX MODEL 
+# 1 : BOX MODEL 
 > (Let us understand How the "Brik" of a house behaves ) : 
 
 # 2 : Type Of Elements 
