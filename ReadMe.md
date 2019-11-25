@@ -28,15 +28,15 @@ If you write list of things in new lines then you cannot make it to appear in a 
 >(Can you color a brick when it do something):
 
 # 5: Height, Width, Margin, Padding
-> (Can you color a brick when it do something)
+>  (Can you color a brick when it do something)
 
- # 6 : Position 
+# 6 : Position
  > (Let us set the position)
 
 # 7 : Units 
 > (brick is bigger than girrafe or smaller then Ant)
 
- # 8 : Float 
+# 8 : Float 
  > (Let the brick of your house to float)
 
 
