@@ -16,18 +16,18 @@ If you write list of things in new lines then you cannot make it to appear in a 
 
 
 #1 : BOX MODEL 
->(Let us understand How the "Brik" of a house behaves ) : 
+> (Let us understand How the "Brik" of a house behaves ) : 
 
-#2 : Type Of Elements 
->(Let us understand  Type of Briks use to create a house)
+# 2 : Type Of Elements 
+> (Let us understand  Type of Briks use to create a house)
 
-#3 : Selectors
+# 3 : Selectors
 > (Let us decorat a brick but first know how to select the brick ) :
 
-#4: Sudo ELements & Sudo Classes 
+# 4: Sudo ELements & Sudo Classes 
 >(Can you color a brick when it do something):
 
-> #5: Height, Width, Margin, Padding (Can you color a brick when it do something)
+# 5: Height, Width, Margin, Padding (Can you color a brick when it do something)
 
 > #6 : Position : (Let us set the position)
 
