@@ -16,7 +16,15 @@ If you write list of things in new lines then you cannot make it to appear in a 
 
 
 # 1 : BOX MODEL 
-> (Let us understand How the "Brik" of a house behaves ) : 
+> (Let us understand how the "Briks" of a house behaves ) : 
+
+ Building block of of your house  are "Briks". Similarly Building block of the  hwat you see in app  HTML elements. As you know some briks are having borders also and some briks are having some texts inside the border. Distance between the border and the text is call padiing. Now border is the ending no any material is available outside of the border of the briks. Now how much space it wants to take even after it is stable and fixed. Means if you are in you office the you create a distance betwwen other employess to sit similary that outer space after the border is called margin
+
+ADD IMAGE of brick and box model
+
+Increase in padding  will increase the width and height because it will create space for inner text of the briks
+Increasing the margin will not increase height and width but it will increase the sourounding space. So the bricks have lot of space get reserved for there outer surface
+
 
 # 2 : Type Of Elements 
 > (Let us understand  Type of Briks use to create a house)
