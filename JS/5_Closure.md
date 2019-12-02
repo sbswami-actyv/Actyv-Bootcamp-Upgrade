@@ -1,5 +1,5 @@
 # Closure
->A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created `every time a function is created`, at function creation time.
+>A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the [lexical environment](#lexical-scoping)). In other words, a closure gives you access to an outer function’s scope from an inner function. In JavaScript, closures are created `every time a function is created`, at function creation time.
 
 
 
@@ -44,7 +44,7 @@ lexical();
 
 
 
-Example :
+#### Sample Program 2:
 ```js
 // global scope
 var e = 10;
@@ -65,8 +65,7 @@ function sum(a){
 
 
 
-# Practise Problems :
-
+#### Sample Program 3:
 ```js
 function foo(outer_arg) { 
   
