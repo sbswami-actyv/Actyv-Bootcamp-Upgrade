@@ -1,14 +1,18 @@
-# **Variable**
-
+# **Variable**  
 `Variable` which holds the data value and it can be changed anytime.
-
-```js
+```javascript
 var a = 10;
 a = "String";
 console.log(a); // String
 ```
 
-_JavaScript_ uses reserved keyword `var`,`let` and `const`  to declare a variable.
+
+
+
+
+
+
+_JavaScript_ uses reserved keyword `var`,`let` and `const`   to declare a variable.
 
 
 ## **Var :-**
@@ -181,15 +185,72 @@ foo1();
 
 ## **Hoisting**
 
-Hoisting in JavaScript is a feature in which the interpreter moves the function and variable declarations to the top of their containing scope. It means that variable declarations, wherever they occur, are processed before any code is executed. Note that hoisting only moves the declaration and not the assignment. This will be clearer in the examples below.
+>In General, `Hoisting` according to Google Dictionary is to **raise** (something) by means of ropes and pulleys. E.g. "a white flag was hoisted” etc. But what do you think hoist would be in the JavaScript’s Context ?? Does Javascript pull something up ? Read below to find out...
 
 
 
-![hoisting](https://chiendt.files.wordpress.com/2017/05/screenshot-at-may-16-14-57-31.png)
+```js
+    x=10;//Initialize variable x with 10,
+
+    console.log(x) //Print the variable x,
+
+    var x;//And then Declare variable x.
+
+
+```
+**OUTPUT:**
+
+```js
+
+    //What do you think would be the result of the above piece of code in Java/C?
+    ERROR!
+
+```
+But in JavaScript you would swiftly be answered as 10. Yes, this is because of a concept called Hoisting in JavaScript. In Plain words **Hoisting in JavaScript means you can use a variable without declaring it before after initialization. This is because of the JavaScript’s default behavior to move all the declarations to the top of the respective block and then start the execution of code**.
+<br>
+
+![image1](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image1.png?alt=media&token=e10c579d-eaaa-4627-b55f-2f592ee4bae7)
+<br>
+<br>
+
+But wait, don’t jump to conclusions so soon…What do you think would be the result of this line of code below.
+<br>
+
+![image3](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image6.png?alt=media&token=3d30604e-fae4-48df-bacd-eec64b68c537)
+If you are thinking that the result would be 10, then sorry my dear friend the result is `UNDEFINED`. Puzzled?! Yes, because only the `DECLARATIONS` are moved to the top but not the `INITIALIZATIONS`. And so variable x was declared but the value was unknown until the last line of code and hence the result was undefined.
+
+
+
+![image2](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image5.png?alt=media&token=4213d1a0-aa45-4608-91e6-90558a6f9693)
+
+<br>
+
+>But does this rule apply to all types of declarations? I mean does this rule apply to declarations of variable using ‘let/const’ keyword. No!! This rule of Hoisting is applicable only to variable declared using the `VAR` keyword.
+Variables defined with let/const are not hoisted to the top. Using a let variable before it is declared will produce a result “ReferenceError”. This variable is in a "TEMPORAL DEAD ZONE" from the start of the block until it is declared and so we have our answer.
+Just as an Extra info, the var declarations are declared directly into the window object when declared in global scope with value as undefined until initialized but this doesn’t happen in the case of variable declared using let/const. This can be verified using the below animation.
+
+<br>
+
+![Hoisting gif by @mohan_drive](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image2.gif?alt=media&token=96ed5a29-49c7-4b7a-a7cf-dce5221ede27)
+
+
+Just to verify what you have learnt, Guess the result of this line of code below,
+
+![image4](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image3.png?alt=media&token=2f217238-c9b8-4f9f-b53e-065154159225)
+
+For the guys who think the answer is 10, you are wrong ! Take a look at the first paragraph. The declarations are moved to the top but in their own block so x is undefined in global scope as it is declared in the function and hence gives us an Error.
+<br>
+![image6](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image5.png?alt=media&token=4213d1a0-aa45-4608-91e6-90558a6f9693)
 
 
 
 
+<!-- ![hoisting](https://chiendt.files.wordpress.com/2017/05/screenshot-at-may-16-14-57-31.png) -->
+
+
+
+<br>
+<br>
 
 
 
