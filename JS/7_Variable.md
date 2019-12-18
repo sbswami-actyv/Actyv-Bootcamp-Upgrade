@@ -240,7 +240,7 @@ Just to verify what you have learnt, Guess the result of this line of code below
 
 For the guys who think the answer is 10, you are wrong ! Take a look at the first paragraph. The declarations are moved to the top but in their own block so x is undefined in global scope as it is declared in the function and hence gives us an Error.
 <br>
-![image6](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image5.png?alt=media&token=4213d1a0-aa45-4608-91e6-90558a6f9693)
+![image6](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image4.png?alt=media&token=a395cd2c-a7c4-4ada-be14-88d4aa4a740e)
 
 
 
