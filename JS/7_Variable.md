@@ -1,13 +1,10 @@
 # **Variable**  
 `Variable` which holds the data value and it can be changed anytime.
 ```javascript
-var a = 10;
-a = "String";
+var age = 10;
+age = "String";
 console.log(a); // String
 ```
-
-
-
 
 
 
@@ -185,7 +182,7 @@ foo1();
 
 ## **Hoisting**
 
->In General, `Hoisting` according to Google Dictionary is to **raise** (something) by means of ropes and pulleys. E.g. "a white flag was hoisted” etc. But what do you think hoist would be in the JavaScript’s Context ?? Does Javascript pull something up ? Read below to find out...
+>In General, **`Hoisting`** according to Google Dictionary is to **raise** (something) by means of ropes and pulleys. E.g. "a white flag was hoisted” etc. But what do you think hoist would be in the JavaScript’s Context ?? Does Javascript pull something up ? Read below to find out...
 
 
 
@@ -207,17 +204,23 @@ foo1();
 
 ```
 But in JavaScript you would swiftly be answered as 10. Yes, this is because of a concept called Hoisting in JavaScript. In Plain words **Hoisting in JavaScript means you can use a variable without declaring it before after initialization. This is because of the JavaScript’s default behavior to move all the declarations to the top of the respective block and then start the execution of code**.
-<br>
+
 
 ![image1](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image1.png?alt=media&token=e10c579d-eaaa-4627-b55f-2f592ee4bae7)
-<br>
-<br>
 
-But wait, don’t jump to conclusions so soon…What do you think would be the result of this line of code below.
-<br>
+
+
+
+But wait, don’t to conclusions so soon… What do you think would be the result of this line of code below.
+
+
+
 
 ![image3](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image6.png?alt=media&token=3d30604e-fae4-48df-bacd-eec64b68c537)
+
+
 If you are thinking that the result would be 10, then sorry my dear friend the result is `UNDEFINED`. Puzzled?! Yes, because only the `DECLARATIONS` are moved to the top but not the `INITIALIZATIONS`. And so variable x was declared but the value was unknown until the last line of code and hence the result was undefined.
+
 
 
 
@@ -239,13 +242,9 @@ Just to verify what you have learnt, Guess the result of this line of code below
 ![image4](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image3.png?alt=media&token=2f217238-c9b8-4f9f-b53e-065154159225)
 
 For the guys who think the answer is 10, you are wrong ! Take a look at the first paragraph. The declarations are moved to the top but in their own block so x is undefined in global scope as it is declared in the function and hence gives us an Error.
-<br>
+
+
 ![image6](https://firebasestorage.googleapis.com/v0/b/bootcamp-5e181.appspot.com/o/image4.png?alt=media&token=a395cd2c-a7c4-4ada-be14-88d4aa4a740e)
-
-
-
-
-<!-- ![hoisting](https://chiendt.files.wordpress.com/2017/05/screenshot-at-may-16-14-57-31.png) -->
 
 
 
@@ -264,7 +263,6 @@ For the guys who think the answer is 10, you are wrong ! Take a look at the firs
 
 Keyword | Scope | Hoisting | Can Be Reassigned | Can Be Redeclared
 ------- | ------- | ------- | ------- | -------
-Keyword | Scope | Hoisting | Can Be Reassigned | Can Be Redeclared
 var | Function scope | Yes | Yes | Yes
 let | Block scope | No | Yes | No
 const | Block scope | No | No | No

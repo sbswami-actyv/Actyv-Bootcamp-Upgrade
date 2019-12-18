@@ -132,40 +132,13 @@ function first(a,callback){
 
 ![Higher order function: Reference google](https://miro.medium.com/max/812/1*-kjr_j7fmoQNIGLf8eZIgw.jpeg)
 
-## Normal Function
-```js
-function add (a) {
-  return function (b) {
-    return a + b;
-  }
-}
-add(3)(4);
-
-```
-`OUTPUT:`
-```js
-7
-```
-
-## Arrow Function
-```js
-
-add=(x)=>(y)=> x+y;
-
-console.log(add(1)(2));
-
-```
-`OUTPUT:`
-```js
-3
-```
 
 
-```
+Note the nesting of callbacks and the staircase of “})” at the end. This is affectionately called as Callback Hell or Pyramid of Doom due to its namesake resemblance.
 
-Reference : https://www.freecodecamp.org/news/a-quick-intro-to-higher-order-functions-in-javascript-1a014f89c6b
+Some disadvantages of this are —
+- The code becomes harder to read as one has to move from left to right to understand.
 
+- Error handling is complicated and often leads to bad code.
 
-
-
-```
+To overcome this problem, JavaScript ”gods” created Promises
