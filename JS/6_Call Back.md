@@ -134,11 +134,29 @@ function first(a,callback){
 
 
 
-Note the nesting of callbacks and the staircase of “})” at the end. This is affectionately called as Callback Hell or Pyramid of Doom due to its namesake resemblance.
+Problems arise when we want to do multiple async operations. Imagine this hypothetical scenario (where all operations are async) —
 
-Some disadvantages of this are —
-- The code becomes harder to read as one has to move from left to right to understand.
+We query our database for the user Abhi. We read the profile_img_url and fetch the image from someServer.com.
 
-- Error handling is complicated and often leads to bad code.
+After fetching the image, we transform it into a different format, say PNG to JPEG.
 
-To overcome this problem, JavaScript ”gods” created Promises
+If the transformation is successful, we send the user an email.
+We log this task in our file transformations.log with the timestamp.
+
+The code for something like this would like —
+
+
+
+# Here is an image
+
+
+
+`Note` the nesting of callbacks and the staircase of “})” at the end. This is affectionately called as Callback Hell or Pyramid of Doom due to its namesake resemblance. Some disadvantages of this are —
+
+The code becomes harder to read as one has to move from left to right to understand.
+
+Error handling is complicated and often leads to bad code.
+To overcome this problem, JavaScript ”gods” created Promises.
+
+
+**`let's continue Promise in next chapter.`**
