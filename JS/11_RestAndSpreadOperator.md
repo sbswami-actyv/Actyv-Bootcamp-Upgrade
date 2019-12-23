@@ -1,3 +1,4 @@
+![rest andspread operators](https://www.bram.us/wordpress/wp-content/uploads/2018/01/esnext-destructure-and-rest-props-ftw.png)
 # **Rest Operator[...rest]**
 
 
