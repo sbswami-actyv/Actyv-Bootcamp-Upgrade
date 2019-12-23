@@ -1,4 +1,5 @@
-![Data types header](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQS9wM5KfmAz9UzqsifDbYTdETcP6aH0hSh0qYOk9k4xchkPsAC)
+<!-- ![Data types header](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQS9wM5KfmAz9UzqsifDbYTdETcP6aH0hSh0qYOk9k4xchkPsAC) -->
+![Data types](https://geekboots.sfo2.cdn.digitaloceanspaces.com/post/javascript-data-type-1567745251906.jpg)
 # DATA TYPE
 
 
