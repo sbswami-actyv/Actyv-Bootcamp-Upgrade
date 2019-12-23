@@ -1,3 +1,5 @@
+![variables image](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRdlwTjYxevrCXigDBYFzDItpA6fs3grODhz0Rp7XyqfXDBgdT8)
+<!-- ![variables image](https://i1.wp.com/www.geekstrick.com/wp-content/uploads/2017/10/javascript-variables.png?w=756&ssl=1) -->
 # **Variable**  
 `Variable` which holds the data value and it can be changed anytime.
 ```javascript
