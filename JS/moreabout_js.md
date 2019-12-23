@@ -1,5 +1,5 @@
-<!-- ![more about javascript](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdWiskmN_of79ss4nlOzYUiFcQ_j-aoYLqrWPUT5XrTtWXv2v0) -->
-![image for history of js](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZ5VkBinlvUyePvXgFgn_CwHJEJEvY2c47jmE9Rwxjh8GLDbwu)
+![more about javascript](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSdWiskmN_of79ss4nlOzYUiFcQ_j-aoYLqrWPUT5XrTtWXv2v0)
+<!-- ![image for history of js](https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZ5VkBinlvUyePvXgFgn_CwHJEJEvY2c47jmE9Rwxjh8GLDbwu) -->
 # **History Of JavaScript**
 `Brendan Eich`, a Netscape Communications Corporation programmer, created JavaScript in September 1995. It took Eich only 10 days to develop the scripting language, then known as `Mocha`.
 
