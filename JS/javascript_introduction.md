@@ -6,19 +6,19 @@ JavaScript, is a [high-level](#difference-between), [just-in-time compiled](#jus
 
 ## **The topic's we learn in this Bootcamp is**
 
-* [`Data Types`](https://github.com/mnptrinity/Redesign/blob/master/JS/2_Data_Types.md)
-* [`variables`](https://github.com/mnptrinity/Redesign/blob/update/2/JS/7_Variable.md),
-* [`Arrays`](https://github.com/mnptrinity/Redesign/blob/update/2/JS/9_Array.md),
-* [`conditional statements`](),
-* [`Function`](https://github.com/mnptrinity/Redesign/blob/update/2/JS/3_Function.md),
-* [`closure`](https://github.com/mnptrinity/Redesign/blob/update/2/JS/5_Closure.md),
-* [`class`](https://github.com/mnptrinity/Redesign/blob/update/2/JS/4_Class_in_js.md),
-* [`objects`](),
-* [`callback`](https://github.com/mnptrinity/Redesign/blob/update/2/JS/6_Call%20Back.md),
-* [`async and await`](),
-* [`promise`](),
-* [`eventloop`](https://github.com/mnptrinity/Redesign/blob/update/2/JS/8_Event_loop.md),
-* [`rest and spread operators`]().
+* [`Data Types`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/2_Data_Types.md)
+* [`variables`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/7_Variable.md),
+* [`Arrays`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/9_Array.md),
+* [`conditional statements`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/10.condition_statement.md),
+* [`Function`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/3_Function.md),
+* [`closure`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/5_Closure.md),
+* [`class`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/4_Class_in_js.md),
+* [`objects`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/objects.md),
+* [`callback`](https://github.com/mnptrinity/Redesign/blob/update/2/JS/6_Call_Back.md),
+* [`async and await`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/asyncAndAwait.md),
+* [`promise`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/12_Promise.md),
+* [`eventloop`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/8_Event_loop.md),
+* [`rest and spread operators`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/11_RestAndSpreadOperator.md).
 
 
 
