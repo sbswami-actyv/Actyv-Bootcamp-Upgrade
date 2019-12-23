@@ -14,7 +14,7 @@ JavaScript, is a [high-level](#difference-between), [just-in-time compiled](#jus
 * [`closure`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/5_Closure.md),
 * [`class`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/4_Class_in_js.md),
 * [`objects`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/objects.md),]
-* [`clone`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/clone.md);
+* [`clone`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/clone.md)];
 * [`callback`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/6_Call_Back.md),
 * [`async and await`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/asyncAndAwait.md),
 * [`promise`](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/12_Promise.md),
