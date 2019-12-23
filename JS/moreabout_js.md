@@ -28,4 +28,4 @@ The ECMA-262 Specification defined a standard version of the core JavaScript lan
 * `JavaScriptCore` — open source, marketed as Nitro and developed by Apple for Safari
 
 
-[⬅️Go Back](https://github.com/mnptrinity/Redesign/blob/update/2/JS/Js.md)
+[⬅️Go Back](https://github.com/Actyv/Actyv-Bootcamp-Upgrade/blob/master/JS/moreabout_js.md)
