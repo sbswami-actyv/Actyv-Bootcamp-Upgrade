@@ -111,7 +111,6 @@ Now let just chek what methods react js giving for lifcycle of components and wh
     
 -   **componentDidMount**  is executed after the first render only on the client side. This is where AJAX requests and DOM or state updates should occur. This method is also used for integration with other JavaScript frameworks and any functions with delayed execution such as  **setTimeout**  or  **setInterval**. We are using it to update the state so we can trigger the other lifecycle methods.
     
--   **componentWillReceiveProps**  is invoked as soon as the props are updated before another render is called. 
     
 -   **shouldComponentUpdate**  should return  **true**  or  **false**  value. This will determine if the component will be updated or not. This is set to  **true**  by default. If you are sure that the component doesn't need to render after  **state**  or  **props**  are updated, you can return  **false**  value.
     
@@ -260,7 +259,7 @@ CustomButton.defaultProps = {
 };
 ```
 **Is react supports bi directional data flow ?** 
-No, React provides unidirectional flow . We can pass data from parent to child but we can not directly pass data from child to parent  .But we can use arrow functions to pass data from child to parent. This can be done by defining a callback function in parent component  and then calling it into child component
+Yes. React basicaly provides unidirectional flow . We can pass data from parent to child but we can not directly pass data from child to parent  .We have to  use arrow functions to pass data from child to parent. This can be done by defining a callback function in parent component  and then calling it into child component
 
 
 
