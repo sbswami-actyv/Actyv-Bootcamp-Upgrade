@@ -259,6 +259,7 @@ CustomButton.defaultProps = {
 };
 ```
 **Is react supports bi directional data flow ?** 
+
 Yes. React basicaly provides unidirectional flow . We can pass data from parent to child but we can not directly pass data from child to parent  .We have to  use arrow functions to pass data from child to parent. This can be done by defining a callback function in parent component  and then calling it into child component
 
 
