@@ -13,6 +13,30 @@ Some CSS properties will not work
 But if you are not aware of concepts of React . You don't have to go anywhere.
 
 
+# How Code Looks
+
+    import React, { Component } from 'react'; 
+    import { Text, View } from 'react-native';
+    
+    export default class HelloWorldApp extends Component {
+      render() {
+        return (
+          <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+            <Text>Hello, world!</Text>
+          </View>
+        );
+      }
+    }
+
+1: first line is importing the react library to use the features of react to handel the components.
+
+2: Second line is importing Text component to use it and  show some text on screen.
+
+3: Third line is defining a class to make class component by using "Components" class of react which we have imported. This Hello word class will behave as child class for the Component class we have imported bceause we are using keyword Extends which is used to create a child class.
+
+4: Fourth line is using rendor function  to render the js code and UI elements for Android and ios for example , if we will se in rendor function it is returning a View element which is wrapped inside Text element show some text.
+
+
 
 # BASIC  KEYS   IN REACT JS
 
@@ -320,6 +344,36 @@ Bu we can do it by passing callback function from parent to child and passing th
              return  <Text> This is child component <Text/>; 
              } 
       }
+
+## Navigation : 
+In normal web app , browser have back botton to go back and foward button to come forward. Similarly in React Native if we want to navigate from one page to another page without refreshing the page keeping app data alive then we use Navigator.
+eact Navigation provides a straightforward navigation solution, with the ability to present common stack navigation and tabbed navigation patterns on both Android and iOS.
+
+Following are the steps to use react navigation
+
+1: First we have to install the React navigation library
+
+    npm install  --save react-navigation
+2: Install react-native-gesture-handler
+
+    npm install --save react-native-gesture-handler
+3: Now you have to set the screens as follows if you have home page and profile screen
+
+    import  {createAppContainer}  from  'react-navigation'; 
+    import  {createStackNavigator}  from  'react-navigation-stack';
+    
+    const MainNavigator =  createStackNavigator(
+     {
+      Home:  {screen: HomeScreen}, 
+      Profile:  {screen: ProfileScreen},  
+     }
+    );
+    
+    const App =  createAppContainer(MainNavigator);
+    export  default App;
+    
+
+
 
 
 
