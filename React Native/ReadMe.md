@@ -98,8 +98,8 @@ Component is bulding block of the UI, which we can reuse it.
 Type of components : 
 
 >> **Functional components:** 
-are those components which takes Props or values and return some JSX or HTML Elements .
-Basicly it is a function which takes props/values and gives JSX/HTML.
+are those components which takes Props or values and return some JSX or Native Elements .
+Basicly it is a function which takes props/values and gives JSX/Native Elements
 
     import React from  'react';
     import { Text, View } from 'react-native';
@@ -109,8 +109,8 @@ Basicly it is a function which takes props/values and gives JSX/HTML.
     }
     export  default App;=
 > >  **Class components:**  
-> > are those components which takes Props or values and return some JSX or HTML Elements .  
-> > Basicly it is a class which takes props/values and gives JSX/HTML.
+> > are those components which takes Props or values and return some JSX or Native Elements .  
+> > Basicly it is a class which takes props/values and gives Native Elements
 > >They are having there states
 
 ```
@@ -135,7 +135,7 @@ In followind example the option component will show its name as option1. Because
 ## STATE  :
  State is that variable of component on which behaviour of component is decided.
 Supose we have to change the color of the component then there should be a variable which is dirctly connected to the components behavour. If we will change the value that variable then color will be get changed.
-How it is diffrent from normal variable ?]
+How it is diffrent from normal variable ?
 State behaves as live variable . when the state will be get changed we dont have to again give the comand to change the behaviour. It is directly subscribed to the component
 
 Points to be noted : 
@@ -162,13 +162,13 @@ if we want to wrap up the element so it will not be counted on dom, we can use F
     
          rendor(
             return(
-            <div>
+            <View>
                <Text>line one</Text>. // 1st element
                <Text>line one</Text> . // 2nd element
-            <div>
+            <View>
               )
             )
-this is right code in which we wrapping the 'P' elements/tag/components  in a single "div" 
+this is right code in which we wrapping the 'P' elements/tag/components  in a single "View" 
 
 now the best  code is that which uses Fragments
 
@@ -182,7 +182,7 @@ now the best  code is that which uses Fragments
                 <Fragments>
                   )
                 )
-this will not show the fragment when it is mounted it will show only two wrapped components. No any extra div will be there for formality.
+this will not show the fragment when it is mounted it will show only two wrapped components. No any extra view will be there for formality.
 
 ## Lifecycle of a component
 when you open any app then you loads the components and when you switch to another page those components get removed. So these thing happens with the component.
@@ -286,9 +286,9 @@ class ErrorBoundary extends React.Component {
 ## Passing Props From parent to child : 
 To pass props in child component, We can directly pass it where component is called.
  
-      <div>
+      <View>
       <Greeting  color={green}  /> passing prop/data color as green
-      </div>
+      </View>
  Now we have to recive it where we have defined the componet 
 
 
@@ -372,6 +372,11 @@ Following are the steps to use react navigation
     const App =  createAppContainer(MainNavigator);
     export  default App;
     
+
+In first line we are importing createAppContainer from  react navigation  to create app container which can hold the main navigator.
+In second line we are importing createStackNavigator from  react-navigation-stack which will create a stack of the screens
+now in third line , by using create navigator we are defining the screens in stack 
+In fourth line we are using createAppContainer to create a index App element from which navigation will start.
 
 
 
