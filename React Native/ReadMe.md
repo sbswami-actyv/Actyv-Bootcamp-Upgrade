@@ -1,3 +1,4 @@
+![enter image description here](https://i0.wp.com/www.ryadel.com/wp-content/uploads/2018/09/react-native-logo-windows-node-js-npm-upgrade.png?fit=735,330&ssl=1)
 # REACT Native
 React native is same as React but instaead of using HTML elements as JSX we use native components.
 For example, in react we create web app for running it into browser, and browser understands only HTML. In case of React Native we create apps for android or ios , Android will not understand HTML .Android have there own Native elements.
