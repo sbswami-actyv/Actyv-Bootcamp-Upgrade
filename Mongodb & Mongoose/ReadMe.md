@@ -5,18 +5,19 @@ So we dont have to save the data in form of rows and columns. This is why it is 
 
 Example : If we are creating a database having some information of students then database where it save, will look like : 
 
- {
-    "name": "Divyansh",
-
-     "age": "24",
-     "subject": ["mathematics", "science", "Hindi"] 
-    }
+     {
+        "name": "Divyansh",
     
-{
-     "name": "Himanshu",
-      "age": "20",
-      "subject": ["mathematics", "science", "litrature"] 
-      }
+         "age": "24",
+         "subject": ["mathematics", "science", "Hindi"] 
+        }
+        
+    {
+         "name": "Himanshu",
+          "age": "20",
+          "subject": ["mathematics", "science", "litrature"] 
+          }
+
 
 But in SQL it will be shown as tables which have row of names which contains name and row of age which will contain the age. But here it is saving in form of documents or JSON document or object which looks like same
 
