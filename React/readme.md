@@ -1,5 +1,5 @@
 
-![enter image description here](https://miro.medium.com/max/2000/1*LNahgy19uNpetPMqX5n26Q.png)
+![enter image description here](https://www.paragyte.com/img/React_Banner.png)
 
 # REACT
 ReactJS is JavaScript library used for building reusable UI components. According to React official documentation, following is the definition −
