@@ -44,345 +44,285 @@ The following figure will shoq the comparisions for CRUD operations in Mongodb a
 
 
 
-# BASIC  KEYS   IN MongoDb
+## BASIC  KEYS   IN MongoDb
 
-## REACT NATIVE ELEMENTS :
-in this section we will see some react native elements basics. Let just compare the elements in react in react native. for example , You will never see div tag in react native code . you will always see the View tag instead of div. if you have to write some text then you have to use"Text "element.
-Let us have look on some Components
+**SCHEMA :**
+Schema is an object that defines the structure of any entry you will store in the database. For example if you want to store a book detail in the db then you need to define the properties of the book like book's name, id and author. That defining of properties of an entry is called a Schema. 
 
-  
- **Text input :**
-   This is a basic component that allows the user to enter text. 
+In RDBM or SQL they are having schemas or structure like rows and columns in a proper alignment But MongoDB is Schema-Less.We use Mongoose to create schemas.
 
-    <TextInput />
-
- **Button :**
- It provides a basic button component that is rendered nicely on all platforms. The minimal example to display a button looks like this:
-
-    <Button />
-**Touchable Opacity:**
-This works same as button .It can be used to provide feedback by reducing the opacity of the button, allowing the background to be seen through while the user is pressing down.
-
-    <TouchableOpacity />
-
-**Scroll View :** 
-Scroll view is used to scroll the page if content is more then the required height . So we uses scroll view to wrap the content so it can be scrolled and  not get hidden
-
-    <ScrollView>
-     <Text>some larger text........</Text>
-    <ScrollView>
-
-In Some components we can not apply "onPress" events directly. So before applying any styles or event listener chek the official documentation that what props we can pass to component. If component not taking the onpress events and styles then it will not work
-
-## React Native Styles:
-applying styles to react native is same as react and in normal HTML CSS. We can apply inline styles like this:
-
-    <Text style={{color: "blue"}}>just red</Text>
-We can apply styles as embeded by creating a object of styles and then passing that object into component as style prop:
-
-  
-
-     const styles = StyleSheet.create({
-       bigBlue: {
-         color: 'blue',
-         fontWeight: 'bold',
-         fontSize: 30,
-       },
-       red: {
-         color: 'red',
-       },
-      });
-      
-      <Text style={styles.red}>just red</Text> // calling styles as object
-
-
-## COMPONENTS :
-Let us take example of an app. If you will see any app then you will see that it is made up of idividual units like buttons, cards, menu etc. if you will see the menu then there will be lot of options will be listed inside the menu in form of smaller cards. So what  you will do?
-are you going to create each of the options repeatedly. If you do it will take  time and memory as well. Another approach is that we can create one card and we can call it in menu with what amount of number we want. We can pass the diffrent values to that same component wich will behave diffrent with diffrent inputs .
-Component is bulding block of the UI, which we can reuse it.
-
-Type of components : 
-
->> **Functional components:** 
-are those components which takes Props or values and return some JSX or Native Elements .
-Basicly it is a function which takes props/values and gives JSX/Native Elements
-
-    import React from  'react';
-    import { Text, View } from 'react-native';
-    function  App()  {
-      const greeting =  'Hello Function Component!';
-      return  <Text>{greeting}<Text>;
-    }
-    export  default App;=
-> >  **Class components:**  
-> > are those components which takes Props or values and return some JSX or Native Elements .  
-> > Basicly it is a class which takes props/values and gives Native Elements
-> >They are having there states
-
-```
-class Welcome extends React.Component {
-  render() {
-    return <Text>Hello, {this.props.name}</Text>;
-  }
-}
-```
-
-## PROPS :  
-As we discussed above, we can pass the values in components so they can give diffrent output.
-For example :  In menu's options, the component is same but the name will be diffrent like option1, option2, option3, etc. but shape size will be same.
-So, how it is changing the name only but shape and size is common. This is what is called Prop.
-We have to pass the values to components so it can show the name or any other values . The values which we pass to component, are called Props
-
-    <option> <option/>                      //this is option component
-    <option name = "option1"> <option/>     //this is component with props
-
-In followind example the option component will show its name as option1. Because we have passed props to component. You can also say that you are paasing some values to component.
-
-## STATE  :
- State is that variable of component on which behaviour of component is decided.
-Supose we have to change the color of the component then there should be a variable which is dirctly connected to the components behavour. If we will change the value that variable then color will be get changed.
-How it is diffrent from normal variable ?
-State behaves as live variable . when the state will be get changed we dont have to again give the comand to change the behaviour. It is directly subscribed to the component
-
-Points to be noted : 
-1: State is immutable . Use setState() method to change the state
-
-## FRAGMENTS:
- In react you can not render more then one component or element  in rendor function. You have to wrap all the component in a single element. But it will show the wrapper element as well.
-if we want to wrap up the element so it will not be counted on dom, we can use Fragments
+ **MODEL** : Model is an object that gives you easy access to a named collection, allowing you to query the collection and use the Schema to validate any documents you save to that collection.
+    
+  **DOCUMENT** : Each entry in a collection is a Document.
+    
+ **COLLECTION** : All the documents are stored in a collection which in our case is "books" collection.
  
- 
-     *****Wrong CODE******
-     
-     rendor(
-        return(
-           <Text>line one</Text> . // 1st element
-           <Text>line one</Text> . // 2nd element
-          )
-        )
-    
-  upper code wrong  in one time we can use one componet to render but two 
-  "< Text >" component is loading which returns error
+ **SHARDING** : Sharding is the process of storing data records across multiple machines and it is MongoDB's approach to meeting the demands of data growth.
 
-    *****Right Code******
-    
-         rendor(
-            return(
-            <View>
-               <Text>line one</Text>. // 1st element
-               <Text>line one</Text> . // 2nd element
-            <View>
-              )
-            )
-this is right code in which we wrapping the 'P' elements/tag/components  in a single "View" 
+**REPLICATION** : Replication is the process of synchronizing data across multiple servers. Replication provides redundancy and increases data availability with multiple copies of data on different database servers.
 
-now the best  code is that which uses Fragments
+## Let Just Start Coding
+(Prerequisites : JS, basic 'Express' Folder structure Understanding)
 
-    *****Best Code******
-        
-             rendor(
-                return(
-                <Fragments>
-                   <Text>line one</Text> . // 1st element
-                   <Text>line one</Text>. // 2nd element
-                <Fragments>
-                  )
-                )
-this will not show the fragment when it is mounted it will show only two wrapped components. No any extra view will be there for formality.
-
-## Lifecycle of a component
-when you open any app then you loads the components and when you switch to another page those components get removed. So these thing happens with the component.
-1: Mount
-2: Update
-3: Unmount
-
-Now let just chek what methods react js giving for lifcycle of components and why !
-
-
-    
--   **componentDidMount**  is executed after the first render only on the client side. This is where AJAX requests and DOM or state updates should occur. This method is also used for integration with other JavaScript frameworks and any functions with delayed execution such as  **setTimeout**  or  **setInterval**. We are using it to update the state so we can trigger the other lifecycle methods.
-    
-    
--   **shouldComponentUpdate**  should return  **true**  or  **false**  value. This will determine if the component will be updated or not. This is set to  **true**  by default. If you are sure that the component doesn't need to render after  **state**  or  **props**  are updated, you can return  **false**  value.
-    
-
-    
--   **componentDidUpdate**  is called just after rendering.
-    
--   **componentWillUnmount**  is called after the component is unmounted from the dom. We are unmounting our component in  **main.js**. 
-
-## LIST HANDELING
-As we us UL and Li elements in HTML, we use FlatList in React native.
-The `FlatList` component requires two props: `data` and `renderItem`. `data` is the source of information for the list. `renderItem` takes one item from the source and returns a formatted component to render.
-
-
-    <FlatList
-          data={[
-            {key: 'Devin'},
-            {key: 'Dan'},
-            {key: 'Dominic'},
-            {key: 'Jackson'},
-            {key: 'James'},
-            {key: 'Joel'},
-            {key: 'John'},
-            {key: 'Jillian'},
-            {key: 'Jimmy'},
-            {key: 'Julie'},
-          ]}
-          renderItem={({item}) => <Text>{item.key}</Text>}
-        />
-      </View>
-    
-##  WHAT is "Ref"
-If you have to select element on dom then there are 3 famous querry function to serach the  element. 
-1: document.getElementById()
-2: document.getElementsBytagName()
-3:document.getElementsByClassName()
-
-But in react you right the UI code in JSX and that JSX rendered as HTML element so you should not have to use these functions because react will not know the changes.
-so we can use Ref to slect the elements and change the value.
-
-Refs are created using `React.createRef()` and attached to React elements via the `ref` attribute.
-```
-class MyComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    this.myRef = React.createRef();     // here we are defining ref
-  }
-  render() {
-    return <input ref={this.myRef} />;   // here we are putting ref to select elemnt
-  }
-}
+Open the code folder in mongoDB repository and  see the folder structure here:
 
 ```
-Now if we want to access the value of input box then we can acces it by using  
-```
- this.myRef.current;   // it will select the input box 
- this.myRef.current.value;  // it will show the value of input box 
-```
+.
+├── app.js
+├── bin
+│   └── www
+├── package.json
+├── connection
+│   ├── mongoose.js
+├── .gitignore
 
-   
-
-## Error Boundries
-Error Boundries are react component that captures error and shows a fallback UI. It is done  by using getDerivedStateFromError(error) or componentDidCatch(Error) by changing the state to show fallback UI
-
-   ```
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI.
-    return { hasError: true };
-  }
-
-  render() {
-    if (this.state.hasError) {
-      // You can render any custom fallback UI
-      return <Text>Something went wrong.</Text>;
-    }
-
-    return this.props.children; 
-  }
-}
 ```
 
-## Passing Props From parent to child : 
-To pass props in child component, We can directly pass it where component is called.
- 
-      <View>
-      <Greeting  color={green}  /> passing prop/data color as green
-      </View>
- Now we have to recive it where we have defined the componet 
+First thing whenever you clone a node.js repo is run  `npm install`  in your terminal to install all the node_modules defined in package.json.
+
+First naviagate to  `connection/mongoose.js`. Here you can see on top we are requiring  `mongoose`  like  `const mongoose = require("mongoose")`  . Mongoose provides a straight-forward, schema-based solution to model your application data. In simple words, Mongoose acts as an intermediate between mongodb and server side language (like NodeJs).
+
+Then next you must be seeing the below line:
+
+`require("dotenv").config();`
+
+We will talk about this in detail. But for now just look at what is does. So  `dotenv`  is an npm package which loads the environment variables from the  `.env`  file into the application and make them accessible through  `process.env.KEY_NAME`. Now coming to next part, how to actually make a connection to MongoDB.
+
+```
+mongoose.connect(process.env.mongoURI, {
+	useNewUrlParser:  true,
+	useUnifiedTopology:  true
+});
+
+```
+
+Mongoose provides a connect method which takes two parameters as follows: 1. Mongo URI : Connection Url which you got from Atlas before. 2. options: Some MongoDB parameters.
+
+You can read more about what parameters it supports from here:  [https://mongoosejs.com/docs/connections.html](https://mongoosejs.com/docs/connections.html)
+
+Now let's go through the Event Handlers which are as follows:
+
+1.  `connected`  - This piece of code will run when the connection is established successfully. So if you want to perform some tasks after a connection is established you can do them here.
+
+```
+mongoose.connection.on("connected", () => {
+	console.info("MongoDB connected Successfully!!");
+});
+
+```
+
+2.  `error`  - This piece of code will run when the mongoose driver will not be able to make a connection to mondoDB.
+
+```
+mongoose.connection.on("error", err  => {
+	console.error(`Error in mongoose connection: ${err.message}`);
+});
+
+```
+
+3.  `disconnected`: This piece of code will run whenever the driver is disconnected from the Atlas server.
+
+```
+mongoose.connection.on("disconnected", () => {
+console.info("Mongoose connection is disconnected");
+});
+
+```
+
+4.  `SIGINT`: This piece of code will run whenever there is an unexpected shutdown of the server or somehow unexpectedly the driver is disconnected.
+
+```
+process.on("SIGINT", function() {
+	mongoose.connection.close(() => {
+		process.exit(0);
+	});
+});
+
+```
+
+Now we haven't create a  `.env`  file yet. So if you run only this it will show error like cannot find variable  `mongoURI`  or it is undefined. So let's create it first. Add a file and name it as  `.env`  in the root folder and insert below line:
+
+`mongoURI: <your connection url from Altas>`
+
+Remember we used to register our routes in  `app.js`. Same thing we have to do here also. We need to require this file once in app.js. So if you open app.js you will find the following line
+
+`require("./connection/mongoose");`
+
+This is just like running a script. When we require it means we are running the javascript present in that file. So if we require like this, it will run and establish a mongDB connection. Remember there was this line  `console.info("MongoDB connected Successfully!!");`  in the  `connected`  event handler in  `connection/mongoose.js`  file. This will print "MongoDB connected Successfully!!" in your console if the connection is established successfully otherwise if not it will print error to your console.
+
+Note: console.log() is a very bad practice. In future we will learn how to use and configure a logger.
+
+Now if you run this using  `npm start`  it will require the mongoose connection and connection will be established. Next step is to insert data to it but before that we need to learn some terminologies which will be helpful throughout the bootcamp.
 
 
-    import React,  { Component }  from  'react';
-    import {Text, View } from 'react-native';
-    class  App  extends  Component  {
-      render(props)  {               // reciving props
-      return  (
-      <View>
-      <Text>{props.greeting}</Text>     // using prop value to display
-      </View>
-      );
-      }
-    }
-    export  default App;
 
-## Passing Props From child to parent : 
+**Schema, Model, Document and Collection:**
 
-To pass props from parent to child is too easy . but there is no any portal looks to pass some data from child to parent.because when we call the element or component then we can pass the data but we cannot send data from where it is defined.
-Bu we can do it by passing callback function from parent to child and passing the data and running the callback function from the child component .
-   
+Now move to branch  `database/schema`  like we did before.
 
-        import ChildComponent from ".../location"
-        class SomeParentComponent extends React.Component {
-          constructor(props) 
-           { super(props); 
-             this.state = {color: 'red'}; 
-           }
-          function recieveDataAndChangeColor(data) {
-            this.setState(
-              {
-               color : data
-              }
-            )
-          }
-         render() { 
-            return  <ChildComponent color = {this.recieveDataAndChangeColor.bind(this)} />; 
-            } 
-         }
+Now you will see a new folder named  `schema`. Open  `schema/index.js`.
 
- Now getting the function and calling it in child component.
- when we call the recieveDataAndChangeColor("green") it will pass the value green from child component  and run the fucntion and fucntion will set state's color as green
- 
+Like we did before we first import  `mongoose`  on top, then in next line we are extracting  `Schema`  method from mongoose.
 
-      class ChildComponent extends React.Component {
-           constructor(props) 
-            { super(props);
-            }
-            componentDidMount(){
-            this.props.recieveDataAndChangeColor("green")  // calling function here
-            }
-           render() { 
-             return  <Text> This is child component <Text/>; 
-             } 
-      }
+```
+const Schema = mongoose.Schema;
 
-## Navigation : 
-In normal web app , browser have back botton to go back and foward button to come forward. Similarly in React Native if we want to navigate from one page to another page without refreshing the page keeping app data alive then we use Navigator.
-eact Navigation provides a straightforward navigation solution, with the ability to present common stack navigation and tabbed navigation patterns on both Android and iOS.
+```
 
-Following are the steps to use react navigation
+Then we defined a user schema as follows:
 
-1: First we have to install the React navigation library
+```
+const userSchema = new Schema({
+	<property_name>: <property_type>
+})
 
-    npm install  --save react-navigation
-2: Install react-native-gesture-handler
+```
 
-    npm install --save react-native-gesture-handler
-3: Now you have to set the screens as follows if you have home page and profile screen
+Example:
 
-    import  {createAppContainer}  from  'react-navigation'; 
-    import  {createStackNavigator}  from  'react-navigation-stack';
+```
+const userSchema = new Schema({
+	firstName: String
+})
+
+```
+
+This can also be written as follows:
+
+```
+const userSchema = new Schema({
+	firstName: {
+		type: String
+	}
+})
+
+```
+
+The benefit of the above method is we can define other properties as well, like in below example
+
+```
+const userSchema = new Schema({
+	firstName: {
+		type: String,
+		minlength: 6
+	}
+})
+
+```
+
+`minlength`  will add a validation that minimum length of the firstName should be 6 otherwise the document will not be inserted in the collection. You can read more about schema types here:  [https://mongoosejs.com/docs/schematypes.html](https://mongoosejs.com/docs/schematypes.html)
+
+Now see the last line in schema/index.js :
+
+`module.exports = User = mongoose.model("User", userSchema);`
+
+Here we are exporting a mongoose model.  `mongoose.model`  will take two parameters:
+
+1.  Collection name which in this case is "User"
+2.  Schema
+
+So now each entry/document of user will be the part of "user" collection in Atlas.
+
+**Instance, Static Methods and Virtuals:**
+
+1.  Instance Methods: These are the methods which are used to manipulate the individual document like  `updateUserByName(`),  `findUserById()`. Some of them are already provided by mongoose driver as explained here:  [https://mongoosejs.com/docs/queries.html](https://mongoosejs.com/docs/queries.html). We also can create our custom instance methods which we are going to learn in a bit.
     
-    const MainNavigator =  createStackNavigator(
-     {
-      Home:  {screen: HomeScreen}, 
-      Profile:  {screen: ProfileScreen},  
-     }
-    );
+2.  Static Methods: These are the methods which are used to query the whole collection. We will do an example of the same in a bit.
     
-    const App =  createAppContainer(MainNavigator);
-    export  default App;
+3.  Virtuals: Virtuals are the document properties that you can get and set but that do not get persisted to MongoDB like for example there are two properties in your schema one is firstName and other is lastName. Now there is a requirement there in which you have to print the full name. One way is to do like this  `firstName + " " + lastName`, another is  `${firstName} ${lastName}`. But the best way would be if we can directly access like User.fullName. So what virtuals does is, it creates a virtual property  `fullName`  to the schema but this property will not be persisted in the database but we can access this like  `User.fullName`.
     
 
-In first line we are importing createAppContainer from  react navigation  to create app container which can hold the main navigator.
-In second line we are importing createStackNavigator from  react-navigation-stack which will create a stack of the screens
-now in third line , by using create navigator we are defining the screens in stack 
-In fourth line we are using createAppContainer to create a index App element from which navigation will start.
+💡  ****Pro Tip :****  The Schema, Instance Methods and Virtuals are applied on a Schema not on a Model.
+
+Let's see an example for each one of those:
+
+Change your branch to  `database/schema-methods`
+
+You will see a new folder  `methods`  in the root directory. Open  `methods/index.js`.
+
+As I said above theses methods (static, instance and virtuals) are applied on the schema rather than the model first setep will be to import that schema like below.
+
+`const { userSchema } = require("../schema/index");`
+
+Now you might be wondering why I used destructuring here but not in other imports. You will get your answer as you move further.
+
+First let's see how to define  **instance methods**. Consider the following piece of code.
+
+```
+userSchema.methods.getIfAdult  =  function() {
+	return  this.age >  18;
+};
+
+```
+
+`this`  is a keyword which will give refer to current user object.
+
+Now you might also be wondering why I did not use arrow functions here like below:
+
+```
+userSchema.methods.getIfAdult  = () => {
+	return  this.age >  18;
+};
+
+```
+
+So there is this one thing about arrow functions that they have no scope means we cannot use  `this`  keyword here.
+
+Now lets describe some  **static methods**. There are two ways in which you can define static methods.
+
+Method 1:
+
+```
+userSchema.statics.findByAge  =  function(age, callback) {
+	this.find({ age: age }, callback);
+};
+
+```
+
+Method 2:
+
+```
+userSchema.static("findByLastName", function(lastname, callback) {
+	this.find({ lastname: lastname }, callback);
+});
+
+```
+
+Now let's see how can we implement  **Virtuals**.
+
+```
+userSchema.virtual("fullName").get(function() {
+	return this.firstname + " " + this.lastname;
+});
+
+```
+
+This will create a virtual property  `fullName`  and whenever we will call  `user.fullName`  it will return  `this.firstname + " " + this.lastname;`
+
+We will run all these while implementing controllers in next topic.
+
+**Important:**  For all these methods to work it is important to require them before creating the model out of schema. Otherwise they will not be a part of mongoose objects.
+
+So now if you remind we create and export the model in schema files. So open "schema/index.js" and move to last. You will see the below lines.
+
+```
+module.exports.userSchema = userSchema;              ---- Line 1
+require("../methods/index");                         ---- Line 2
+const User = mongoose.model("User", userSchema);     ---- Line 3
+module.exports.User = User;                          ---- Line 4
+
+```
+
+Let's see them one by one. First focus on line 2. As I said before creating and exporting the model we have to require the above methods. So Line 2 does that.
+
+But why there are two exports.  🤔
+
+If you open  `methods/index.js`  you will see on top we have to import user schema. So before requiring methods in the schema we have to export the schema so that methods/index.js can consume the schema.
+
+And now since we have to export two objects here one is model and other is schema. Therfore there are 2 module.exports. So now we are exporting the following object  `{userSchema, User}`, and this is the reason we import like this  `const { userSchema } = require("../schema/index");`  in our methods file.
+
+
+
 
 
 
