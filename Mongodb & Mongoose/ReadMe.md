@@ -7,6 +7,7 @@ Example : If we are creating a database having some information of students then
 
 > {
 >     "name": "Divyansh",
+
 >      "age": "24",
 >      "subject": ["mathematics", "science", "Hindi"] 
 >      }
