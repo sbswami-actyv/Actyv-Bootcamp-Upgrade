@@ -66,6 +66,19 @@ Following are some HTML tags :
     <ul> & <li>   Unordered List & List Item
     <hr>          Horizontal line
     <div>         Mostly it works as wrapper.  We can create diffrent divisions by wrapping text images and buttons or more elements.
+
+## Attributes 
+
+Attributes are properties which we pass in tag or element. Attributes works as input to the elements and it sets the properties. 
+For example : Let us take input element if we have to apply some styles then we can pass it as attribute to input tag like this :
+
+    <input type = radio >
+    <input input = radio >
+    <input style = "height : 20px" >
+    
+  here in example `type` and `styles` are attributes . Similarly there many attributes like value, placeholder , etc.
+
+
  
 
 ## Block Elements Vs Inline Elements: 
@@ -105,12 +118,93 @@ Now if you have to write any tages or elements then tag will have opening repres
 
 Let suppose if we have to use 'h1' tag then we have  write opening tag by writing  `<h1>` and then we have to close it by writing a slash `</h1>`. if we have to put or content in this to display  the we will put inside opening and closing of the tag.
 
+ ## LINKS : 
+ When we want user to go on pertical website after clicking some text or image then we have to provide link.
+ This can be done by using "Anchor" tags denoted as `<a>`.  
+
+     <a href="https://www.actyv.com/html/">Go to Actyv's Website</a>
+     
+ It will show the text  "Go to Actyv's Website" in blue color. Anchor tag takes  href attributes in which we pass the URL. If some one is going to clik that anchor tag then he will be redirected to that URL 
+By default, a link will appear like this (in all browsers):
+-   An unvisited link is underlined and blue
+-   A visited link is underlined and purple
+-   An active link is underlined and red
+
+## Image: 
+Every website or web app contains Image. In web page or website if you want to add images then you ahve to use `<img>` tag.
+For example: 
+
+    <img src="picture.jpg">
+    
+This will include the image which you are goig to call locallly or remotely. If you want that image form remote then enter the url of the image otherwise you can enter the local image's path from your system in src attribute
+
+## List
+Lists are of two types
+
+ 1. Orderd List
+ 2. Unorderd List
+
+**Unordered List** :  Unordered List starts with any symbols like circle or square or bullets as shown in figure.
+![enter image description here](https://sapnesakar.com/HTML/lesson_12/ul_output.png)
+
+To create the unordered list we have to use `<UL>`  and `<Li>`. So let just see how we  can use it. `<Li>` will contain the data items and `<ul>` will contain the  multiple `<Li>` or data as shown in figure 
+
+    <ul>
+    	<li>HTML<li>
+    	<li>CSS<li>
+    	<li>Js<li>
+    	<li>Jquerry<li>
+    </ul>
+    
+By default  it will show the circles. But we can change it by changing the style of list as follows.
+
+    style="list-style-type:none;"
+
+you need to add the upper line in `<UL>` tag like this:
+
+    <ul style="list-style-type:square">
+so it will show squares instead of circle. you can chage it as disc, circle, square or none.
 
 
+**Ordered List**:  Ordered List starts with some numbers or alphabets Like this
+ ![enter image description here](https://sapnesakar.com/HTML/lesson_12/ol_output.png)
 
+To create the unordered list we have to use `<ol>`  and `<Li>`. So let just see how we  can use it. `<Li>` will contain the data items and `<ol>` will contain the  multiple `<Li>` or data as shown in figure 
 
+    <ol type = "A">      //this type will decide that list will show A,B,C
+    	<li>HTML<li>
+    	<li>CSS<li>
+    	<li>Js<li>
+    	<li>Jquerry<li>
+    </ol>
 
+We can change the type like number,alphabet or roman by changing the type as follows
 
+type = "A"  // for Alphabets
+type = "a"  // for Alphabets in lower case
+type = "1"  // for numbers
+type = "i"  // for roman numbers
+
+## Start Creating Web Pages 
+
+1: Open any folder and create a file having file name index.html
+2: Now type this code in that file and save it
+
+  <!DOCTYPE html>  
+     <html>  
+     
+      <head>  
+       <title>Page Title</title>  
+      </head>  
+      
+      <body> 
+        <h1>My First Heading</h1>  
+        <p>My first paragraph.</p>  
+      </body>  
+    
+    </html>
+3 : Now open that index.html file in browser It will show you. the follwing screen
+![enter image description here](https://www.w3schools.com/html/img_chrome.png)
 
 
 
